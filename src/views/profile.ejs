@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Ferme du Vatican</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f3f4f6;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-brand { display: flex; align-items: center; gap: 15px; }
+    .header-logo { font-size: 2em; }
+    .header-title { font-size: 1.5em; font-weight: 700; }
+    .main { max-width: 800px; margin: 0 auto; padding: 30px; padding-bottom: 80px; }
+    .profile-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
+    .profile-header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+    .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; }
+    .profile-info h2 { color: #333; margin-bottom: 5px; }
+    .profile-info p { color: #6b7280; }
+    .profile-badge { display: inline-block; padding: 5px 15px; background: #dbeafe; color: #1e40af; border-radius: 20px; font-size: 0.9em; font-weight: 600; margin-top: 10px; }
+    .profile-section { margin-bottom: 20px; }
+    .profile-section h3 { color: #333; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
+    .info-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f3f4f6; }
+    .info-label { color: #6b7280; }
+    .info-value { color: #333; font-weight: 500; }
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; }
+    .btn-primary { background: #667eea; color: white; }
+    .btn-primary:hover { background: #5568d3; }
+    .btn-danger { background: #ef4444; color: white; }
+    .btn-danger:hover { background: #dc2626; }
+    .actions { display: flex; gap: 15px; margin-top: 20px; }
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-around; padding: 10px 0; }
+    .nav-tab { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #9ca3af; padding: 8px 20px; border-radius: 10px; font-size: 0.8em; }
+    .nav-tab:hover, .nav-tab.active { color: #667eea; background: #f3f4f6; }
+    .nav-tab-icon { font-size: 1.5em; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-logo">🐔</span>
+      <span class="header-title">Mon Profil</span>
+    </div>
+  </header>
+  <main class="main">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar"><%= user ? user.charAt(0).toUpperCase() : 'U' %></div>
+        <div class="profile-info">
+          <h2><%= user || 'Utilisateur' %></h2>
+          <p><%= email || 'email@exemple.com' %></p>
+          <span class="profile-badge">Utilisateur</span>
+        </div>
+      </div>
+      <div class="profile-section">
+        <h3>Informations du compte</h3>
+        <div class="info-row">
+          <span class="info-label">Nom complet</span>
+          <span class="info-value"><%= nom || 'Dupont' %> <%= prenom || 'Jean' %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <span class="info-value"><%= email || 'jean.dupont@exemple.com' %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Téléphone</span>
+          <span class="info-value"><%= telephone || '+33 6 12 34 56 78' %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Rôle</span>
+          <span class="info-value">Utilisateur</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Membre depuis</span>
+          <span class="info-value">Janvier 2026</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a href="/profile/edit?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="btn btn-primary">✏️ Modifier le profil</a>
+        <% if (role === 'manager' || role === 'admin') { %>
+        <a href="/users?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&role=<%= encodeURIComponent(role || '') %>" class="btn btn-success">👥 Gestion utilisateurs</a>
+        <% } %>
+        <a href="/logout" class="btn btn-danger">🚪 Déconnexion</a>
+      </div>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🏠</span><span>Accueil</span></a>
+    <a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🐣</span><span>Lots</span></a>
+    <a href="/alerts?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🚨</span><span>Alertes</span></a>
+    <a href="/iot?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">📡</span><span>IoT</span></a>
+    <a href="/rapports?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">📊</span><span>Rapports</span></a>
+    <a href="/profile?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab active"><span class="nav-tab-icon">👤</span><span>Profil</span></a>
+  </nav>
+</body>
+</html>

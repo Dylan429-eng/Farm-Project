@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/home/dylan/farm-backend/logs/.08691f584d2aee715c2c2a94ce4c2b70d6687e82-audit.json",
+    "files": [
+        {
+            "date": 1769097365940,
+            "name": "/home/dylan/farm-backend/logs/error-2026-01-22.log",
+            "hash": "d2ba1393bfdde574b234e31f712cf02c1992c8c048bb3739de0c33a45db79421"
+        },
+        {
+            "date": 1769187454401,
+            "name": "/home/dylan/farm-backend/logs/error-2026-01-23.log",
+            "hash": "a793e73dfa5033239fc7c8cbfc3470ff99d27a59f0569d4939a26c97a7c9d443"
+        },
+        {
+            "date": 1771155587318,
+            "name": "/home/dylan/farm-backend/logs/error-2026-02-15.log",
+            "hash": "028d2aef92792eb6af90881523488527318abd0d07bfde33ce2b95e647053816"
+        },
+        {
+            "date": 1771272767215,
+            "name": "/home/dylan/farm-backend/logs/error-2026-02-16.log",
+            "hash": "cb5975f12baadfaf0dc77330071c0ab4d5daaec02ccf6f9973b133f2d052d289"
+        },
+        {
+            "date": 1771294311375,
+            "name": "/home/dylan/farm-backend/logs/error-2026-02-17.log",
+            "hash": "d11af8e7e6e129f8d1f18c3d1b684102877b309a017173b71d70bbd3775ff78d"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails de l'alerte - Ferme du Vatican</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f3f4f6;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px 30px;
+    }
+    .header-brand { display: flex; align-items: center; gap: 15px; }
+    .header-logo { font-size: 2em; }
+    .header-title { font-size: 1.5em; font-weight: 700; }
+    .main { max-width: 800px; margin: 0 auto; padding: 30px; padding-bottom: 80px; }
+    .breadcrumb { color: #6b7280; margin-bottom: 20px; }
+    .breadcrumb a { color: #667eea; text-decoration: none; }
+    .alert-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .alert-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px; }
+    .alert-title { font-size: 1.5em; color: #333; margin-bottom: 5px; }
+    .alert-badge { padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: 600; }
+    .alert-badge.critical { background: #fee2e2; color: #991b1b; }
+    .alert-badge.warning { background: #fef3c7; color: #92400e; }
+    .alert-badge.info { background: #dbeafe; color: #1e40af; }
+    .alert-meta { color: #6b7280; font-size: 0.9em; margin-bottom: 20px; }
+    .alert-section { margin-bottom: 20px; }
+    .alert-section h3 { color: #333; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
+    .alert-description { color: #374151; line-height: 1.6; }
+    .info-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
+    .info-label { color: #6b7280; }
+    .info-value { color: #333; font-weight: 500; }
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; }
+    .btn-primary { background: #667eea; color: white; }
+    .btn-primary:hover { background: #5568d3; }
+    .btn-success { background: #10b981; color: white; }
+    .btn-success:hover { background: #059669; }
+    .actions { display: flex; gap: 15px; margin-top: 20px; }
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-around; padding: 10px 0; }
+    .nav-tab { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #9ca3af; padding: 8px 20px; border-radius: 10px; font-size: 0.8em; }
+    .nav-tab:hover, .nav-tab.active { color: #667eea; background: #f3f4f6; }
+    .nav-tab-icon { font-size: 1.5em; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-logo">🐔</span>
+      <span class="header-title">Détails de l'alerte</span>
+    </div>
+  </header>
+  <main class="main">
+    <div class="breadcrumb">
+      <a href="/dashboard">Dashboard</a> / <a href="/alerts?user=<%= encodeURIComponent(user || '') %>">Alertes</a> / Détails
+    </div>
+    <div class="alert-card">
+      <div class="alert-header">
+        <div>
+          <div class="alert-title"><%= alert.titre %></div>
+          <span class="alert-badge <%= alert.niveau %>"><%= alert.niveau === 'critical' ? 'CRITIQUE' : alert.niveau === 'warning' ? 'ALERTE' : 'INFO' %></span>
+        </div>
+      </div>
+      <div class="alert-meta">
+        <%= new Date(alert.date_detection).toLocaleString('fr-FR') %> • <%= alert.type_alerte %>
+      </div>
+      <div class="alert-section">
+        <h3>Description</h3>
+        <p class="alert-description"><%= alert.description %></p>
+      </div>
+      <div class="alert-section">
+        <h3>Informations</h3>
+        <div class="info-row">
+          <span class="info-label">Type</span>
+          <span class="info-value"><%= alert.type_alerte %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Cible</span>
+          <span class="info-value"><%= alert.cible_nom %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Statut</span>
+          <span class="info-value"><%= alert.statut === 'active' ? 'Active' : 'Résolue' %></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Date de détection</span>
+          <span class="info-value"><%= new Date(alert.date_detection).toLocaleString('fr-FR') %></span>
+        </div>
+      </div>
+      <div class="actions">
+        <% if (alert.statut === 'active') { %>
+          <a href="/alerts/<%= alert.id %>/resolve" class="btn btn-success">✓ Résoudre</a>
+        <% } %>
+        <a href="/alerts?user=<%= encodeURIComponent(user || '') %>" class="btn btn-primary">← Retour aux alertes</a>
+      </div>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🏠</span><span>Accueil</span></a>
+    <a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🐣</span><span>Lots</span></a>
+    <a href="/alerts?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab active"><span class="nav-tab-icon">🚨</span><span>Alertes</span></a>
+    <a href="/iot?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">📡</span><span>IoT</span></a>
+    <a href="/rapports?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">📊</span><span>Rapports</span></a>
+    <a href="/profile?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">👤</span><span>Profil</span></a>
+  </nav>
+</body>
+</html>

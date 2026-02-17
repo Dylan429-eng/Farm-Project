@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Lots - Ferme du Vatican</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .navbar {
+      background: white;
+      border-radius: 15px;
+      padding: 20px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-brand {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #667eea;
+      text-decoration: none;
+    }
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .navbar-menu a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .navbar-menu a:hover, .navbar-menu a.active {
+      background: #667eea;
+      color: white;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+    .header-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .stat-card h3 {
+      font-size: 0.9em;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+    .stat-card .value {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .stat-card .label {
+      font-size: 0.85em;
+      opacity: 0.8;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .table th,
+    .table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .table th {
+      background: #f3f4f6;
+      font-weight: 600;
+      color: #374151;
+    }
+    .table tr:hover {
+      background: #f9fafb;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+    .badge-success {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .badge-warning {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .badge-danger {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 0.85em;
+    }
+    .btn-info {
+      background: #3b82f6;
+      color: white;
+    }
+    .btn-info:hover {
+      background: #2563eb;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6b7280;
+    }
+    .empty-state-icon {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="/dashboard" class="navbar-brand">🐔 Ferme du Vatican</a>
+    <ul class="navbar-menu">
+      <li><a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>">Dashboard</a></li>
+      <li><a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="active">Lots</a></li>
+      <li><a href="/alerts?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>">Alertes</a></li>
+      <!-- <li><a href="/login">Connexion</a></li> -->
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="header-actions">
+      <div>
+        <h1>🐣 Gestion des Lots</h1>
+        <p class="subtitle">Suivi et gestion de vos lots de poussins</p>
+      </div>
+      <a href="/lots/new" class="btn btn-primary">+ Nouveau Lot</a>
+    </div>
+
+    <!-- Statistiques -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Lots Actifs</h3>
+        <div class="value"><%= stats.totalLots || 0 %></div>
+        <div class="label">lots en cours</div>
+      </div>
+      <div class="stat-card">
+        <h3>Total Poussins</h3>
+        <div class="value"><%= stats.totalPoussins || 0 %></div>
+        <div class="label">poussins actifs</div>
+      </div>
+      <div class="stat-card">
+        <h3>Taux de Mortalité Moyen</h3>
+        <div class="value"><%= stats.avgMortality || 0 %>%</div>
+        <div class="label">sur tous les lots</div>
+      </div>
+      <div class="stat-card">
+        <h3>CPS Moyen</h3>
+        <div class="value"><%= stats.avgCPS || 0 %>€</div>
+        <div class="label">coût par sujet</div>
+      </div>
+    </div>
+
+    <!-- Liste des lots -->
+    <% if (lots && lots.length > 0) { %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom du Lot</th>
+            <th>Bâtiment</th>
+            <th>Nombre Initial</th>
+            <th>Nombre Actuel</th>
+            <th>Âge (jours)</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% lots.forEach(function(lot) { %>
+            <tr>
+              <td>#<%= lot.id %></td>
+              <td><strong><%= lot.nom_lot %></strong></td>
+              <td><%= lot.batiment_nom || 'N/A' %></td>
+              <td><%= lot.nombre_initial %></td>
+              <td><%= lot.nombre_actuel %></td>
+              <td><%= lot.age_jours || 0 %></td>
+              <td>
+                <% if (lot.statut === 'actif') { %>
+                  <span class="badge badge-success">Actif</span>
+                <% } else if (lot.statut === 'termine') { %>
+                  <span class="badge badge-warning">Terminé</span>
+                <% } else { %>
+                  <span class="badge badge-danger">Archivé</span>
+                <% } %>
+              </td>
+              <td>
+                <div class="actions">
+                  <a href="/lots/<%= lot.id %>?user=<%= encodeURIComponent(user || '') %>" class="btn btn-info btn-sm">Voir</a>
+                  <a href="/lots/<%= lot.id %>/edit?user=<%= encodeURIComponent(user || '') %>" class="btn btn-primary btn-sm">Modifier</a>
+                </div>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <div class="empty-state">
+        <div class="empty-state-icon">🐣</div>
+        <h2>Aucun lot trouvé</h2>
+        <p>Commencez par créer votre premier lot de poussins</p>
+        <a href="/lots/new" class="btn btn-primary" style="margin-top: 20px;">Créer un lot</a>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

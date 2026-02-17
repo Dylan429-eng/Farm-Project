@@ -1,0 +1,14 @@
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-16T20:12:52.520Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-16T20:12:55.819Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-16T20:12:55.905Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-16T20:12:55.917Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-16T20:12:55.918Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-16T20:12:55.919Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-16T20:12:55.923Z"}
+{"level":"info","message":"GET / 302 6ms","timestamp":"2026-02-16T20:13:16.415Z"}
+{"level":"info","message":"GET /dashboard 200 140ms","timestamp":"2026-02-16T20:13:17.454Z"}
+{"level":"info","message":"GET /api/health 200 9ms","timestamp":"2026-02-16T20:13:17.796Z"}
+{"level":"info","message":"GET /favicon.ico 204 2ms","timestamp":"2026-02-16T20:13:18.076Z"}
+{"level":"info","message":"GET / 302 2ms","timestamp":"2026-02-16T20:13:20.603Z"}
+{"level":"info","message":"GET /dashboard 304 34ms","timestamp":"2026-02-16T20:13:21.688Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-16T20:14:19.776Z"}

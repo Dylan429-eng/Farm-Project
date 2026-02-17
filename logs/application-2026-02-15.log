@@ -1,0 +1,69 @@
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:01:55.849Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:01:58.197Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:01:58.265Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:01:58.271Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:01:58.277Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:01:58.282Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:01:58.404Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:03:51.756Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:03:53.781Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:03:53.789Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:03:53.791Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:03:53.792Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:03:53.793Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:03:54.492Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:04:32.844Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:04:33.969Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:04:33.994Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:04:34.010Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:04:34.022Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:04:34.028Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:04:34.995Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:08:07.975Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:08:10.111Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:08:10.407Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:08:10.417Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:08:10.418Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:08:10.418Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:08:10.420Z"}
+{"level":"info","message":"GET /dashboard 200 38ms","timestamp":"2026-02-15T12:08:17.641Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /favicon.ico","method":"GET","path":"/favicon.ico","stack":"Error: Route non trouvée: GET /favicon.ico\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:56:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-15T12:08:18.558Z","user":"anonymous"}
+{"level":"info","message":"GET /favicon.ico 404 92ms","timestamp":"2026-02-15T12:08:18.581Z"}
+{"level":"info","message":"GET /api/alerts 401 2ms","timestamp":"2026-02-15T12:09:14.701Z"}
+{"level":"info","message":"GET /api/health 200 3ms","timestamp":"2026-02-15T12:09:20.154Z"}
+{"level":"info","message":"GET /api/lots 401 2ms","timestamp":"2026-02-15T12:09:25.402Z"}
+{"level":"info","message":"GET /api/iot 401 1ms","timestamp":"2026-02-15T12:09:27.930Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-15T12:12:24.155Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:12:34.732Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:12:37.286Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:12:37.294Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:12:37.296Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:12:37.297Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:12:37.299Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:12:38.520Z"}
+{"level":"info","message":"GET /dashboard 304 15ms","timestamp":"2026-02-15T12:12:43.143Z"}
+{"level":"info","message":"GET /dashboard 304 2ms","timestamp":"2026-02-15T12:12:48.522Z"}
+{"level":"info","message":"GET /api/health 200 4ms","timestamp":"2026-02-15T12:12:50.767Z"}
+{"level":"info","message":"GET /api/lots 401 4ms","timestamp":"2026-02-15T12:12:56.656Z"}
+{"level":"info","message":"GET /api/iot 401 1ms","timestamp":"2026-02-15T12:13:01.929Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-15T12:19:08.268Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:19:13.713Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:19:16.832Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:19:29.522Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:19:29.530Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:19:29.532Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:19:29.533Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:19:29.534Z"}
+{"level":"info","message":"GET /dashboard 200 64ms","timestamp":"2026-02-15T12:19:30.078Z"}
+{"level":"info","message":"GET /favicon.ico 204 2ms","timestamp":"2026-02-15T12:19:30.519Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-15T12:21:22.441Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-15T12:21:26.895Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-15T12:21:28.922Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-15T12:21:28.948Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-15T12:21:28.957Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-15T12:21:28.958Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-15T12:21:28.965Z"}
+{"level":"info","message":"GET /dashboard 200 78ms","timestamp":"2026-02-15T12:21:29.828Z"}
+{"level":"info","message":"GET /api/health 200 4ms","timestamp":"2026-02-15T12:21:32.718Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-15T12:21:35.442Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-15T12:34:34.573Z"}

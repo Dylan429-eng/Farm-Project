@@ -1,0 +1,237 @@
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T02:11:51.877Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T02:11:54.264Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T02:11:54.788Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T02:11:54.793Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T02:11:54.794Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T02:11:54.795Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T02:11:54.796Z"}
+{"level":"info","message":"GET /dashboard 200 157ms","timestamp":"2026-02-17T02:14:13.636Z"}
+{"level":"info","message":"GET /register 200 12ms","timestamp":"2026-02-17T02:14:32.450Z"}
+{"level":"info","message":"Nouvel utilisateur inscrit: jeanDupont@gmail.com","timestamp":"2026-02-17T02:15:36.521Z"}
+{"level":"info","message":"POST /api/auth/register 201 2988ms","timestamp":"2026-02-17T02:15:36.527Z"}
+{"duration":"2990ms","ip":"127.0.0.1","level":"info","message":"Requête d'authentification:","method":"POST","path":"/auth/register","status":201,"timestamp":"2026-02-17T02:15:36.548Z","user":"anonymous"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T02:25:58.962Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T02:26:04.554Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T02:26:06.877Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T02:26:07.338Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T02:26:07.374Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T02:26:07.381Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T02:26:07.384Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T02:26:07.391Z"}
+{"level":"info","message":"GET /login 200 139ms","timestamp":"2026-02-17T02:29:49.546Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T02:30:19.154Z"}
+{"level":"info","message":"POST /api/auth/login 200 2888ms","timestamp":"2026-02-17T02:30:19.170Z"}
+{"duration":"2890ms","ip":"127.0.0.1","level":"info","message":"Requête d'authentification:","method":"POST","path":"/auth/login","status":200,"timestamp":"2026-02-17T02:30:19.181Z","user":"anonymous"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T02:36:32.042Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T02:36:51.676Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T02:36:53.434Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T02:36:53.476Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T02:36:53.482Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T02:36:53.488Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T02:36:53.493Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T02:36:54.231Z"}
+{"level":"info","message":"POST /api/auth/register 400 1012ms","timestamp":"2026-02-17T02:37:15.639Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T02:37:33.637Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T02:37:34.796Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T02:37:34.800Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T02:37:34.801Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T02:37:34.801Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T02:37:34.802Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T02:37:36.427Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T02:37:51.681Z"}
+{"level":"info","message":"POST /api/auth/login 200 1685ms","timestamp":"2026-02-17T02:37:51.688Z"}
+{"duration":"1685ms","ip":"127.0.0.1","level":"info","message":"Requête d'authentification:","method":"POST","path":"/auth/login","status":200,"timestamp":"2026-02-17T02:37:51.690Z","user":"anonymous"}
+{"level":"info","message":"GET /dashboard 304 47ms","timestamp":"2026-02-17T02:38:07.572Z"}
+{"level":"info","message":"GET /login 200 33ms","timestamp":"2026-02-17T02:38:09.877Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T02:38:29.286Z"}
+{"level":"info","message":"POST /login 302 2095ms","timestamp":"2026-02-17T02:38:29.355Z"}
+{"level":"info","message":"GET /home?user=Jean 200 39ms","timestamp":"2026-02-17T02:38:29.519Z"}
+{"level":"info","message":"GET /lots 200 48ms","timestamp":"2026-02-17T02:38:44.977Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /css/style.css","method":"GET","path":"/css/style.css","stack":"Error: Route non trouvée: GET /css/style.css\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:38:45.338Z","user":"anonymous"}
+{"level":"info","message":"GET /css/style.css 404 35ms","timestamp":"2026-02-17T02:38:45.362Z"}
+{"level":"info","message":"GET /lots/new 200 142ms","timestamp":"2026-02-17T02:38:51.038Z"}
+{"level":"info","message":"GET /dashboard 304 9ms","timestamp":"2026-02-17T02:39:01.919Z"}
+{"level":"info","message":"GET /login 200 4ms","timestamp":"2026-02-17T02:39:07.522Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T02:39:26.500Z"}
+{"level":"info","message":"POST /login 302 1898ms","timestamp":"2026-02-17T02:39:26.503Z"}
+{"level":"info","message":"GET /home?user=Jean 200 12ms","timestamp":"2026-02-17T02:39:26.535Z"}
+{"level":"info","message":"GET /lots/new 304 24ms","timestamp":"2026-02-17T02:39:29.289Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /rapports","method":"GET","path":"/rapports","stack":"Error: Route non trouvée: GET /rapports\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:39:32.721Z","user":"anonymous"}
+{"level":"info","message":"GET /rapports 404 57ms","timestamp":"2026-02-17T02:39:32.774Z"}
+{"level":"info","message":"GET /alerts 200 19ms","timestamp":"2026-02-17T02:39:39.580Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /iot","method":"GET","path":"/iot","stack":"Error: Route non trouvée: GET /iot\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:39:53.874Z","user":"anonymous"}
+{"level":"info","message":"GET /iot 404 21ms","timestamp":"2026-02-17T02:39:53.893Z"}
+{"level":"info","message":"GET /alerts 304 23ms","timestamp":"2026-02-17T02:40:00.309Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /profile","method":"GET","path":"/profile","stack":"Error: Route non trouvée: GET /profile\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:40:05.557Z","user":"anonymous"}
+{"level":"info","message":"GET /profile 404 9ms","timestamp":"2026-02-17T02:40:05.568Z"}
+{"level":"info","message":"GET /lots 304 26ms","timestamp":"2026-02-17T02:40:29.894Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /css/style.css","method":"GET","path":"/css/style.css","stack":"Error: Route non trouvée: GET /css/style.css\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:40:30.492Z","user":"anonymous"}
+{"level":"info","message":"GET /css/style.css 404 47ms","timestamp":"2026-02-17T02:40:30.525Z"}
+{"level":"info","message":"GET /login 200 46ms","timestamp":"2026-02-17T02:40:34.518Z"}
+{"level":"info","message":"GET /alerts 304 78ms","timestamp":"2026-02-17T02:44:44.326Z"}
+{"level":"info","message":"GET /alerts?filter=critical 200 64ms","timestamp":"2026-02-17T02:44:54.993Z"}
+{"level":"info","message":"GET /alerts?filter=all 200 21ms","timestamp":"2026-02-17T02:44:57.678Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /alerts/1","method":"GET","path":"/alerts/1","stack":"Error: Route non trouvée: GET /alerts/1\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T02:46:20.014Z","user":"anonymous"}
+{"level":"info","message":"GET /alerts/1 404 17ms","timestamp":"2026-02-17T02:46:20.021Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T03:00:14.313Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T03:00:18.434Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T03:00:20.521Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T03:00:20.672Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T03:00:20.676Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T03:00:20.677Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T03:00:20.678Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T03:00:20.679Z"}
+{"level":"info","message":"GET /home?user=Jean 304 47ms","timestamp":"2026-02-17T03:00:26.186Z"}
+{"level":"info","message":"GET /logout 302 30ms","timestamp":"2026-02-17T03:00:32.641Z"}
+{"level":"info","message":"GET /dashboard 304 11ms","timestamp":"2026-02-17T03:00:32.688Z"}
+{"level":"info","message":"GET /login 304 3ms","timestamp":"2026-02-17T03:00:35.759Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T03:00:54.658Z"}
+{"level":"info","message":"POST /login 302 2242ms","timestamp":"2026-02-17T03:00:54.683Z"}
+{"level":"info","message":"GET /home?user=Jean 200 101ms","timestamp":"2026-02-17T03:00:54.832Z"}
+{"level":"info","message":"GET /profile 200 39ms","timestamp":"2026-02-17T03:01:01.010Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /profile/edit","method":"GET","path":"/profile/edit","stack":"Error: Route non trouvée: GET /profile/edit\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T03:01:24.455Z","user":"anonymous"}
+{"level":"info","message":"GET /profile/edit 404 44ms","timestamp":"2026-02-17T03:01:24.484Z"}
+{"level":"info","message":"GET /rapports 200 18ms","timestamp":"2026-02-17T03:02:34.928Z"}
+{"level":"info","message":"GET /iot 200 5ms","timestamp":"2026-02-17T03:02:49.507Z"}
+{"level":"info","message":"GET /alerts 304 107ms","timestamp":"2026-02-17T03:03:09.725Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T03:27:09.127Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T03:27:14.007Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T03:27:16.386Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T03:27:16.554Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T03:27:16.571Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T03:27:16.575Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T03:27:16.578Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T03:27:16.583Z"}
+{"level":"info","message":"GET /iot 200 99ms","timestamp":"2026-02-17T03:27:31.417Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur 200 5ms","timestamp":"2026-02-17T03:27:49.109Z"}
+{"level":"info","message":"GET /iot?user=Utilisateur 200 6ms","timestamp":"2026-02-17T03:27:59.522Z"}
+{"level":"info","message":"GET /profile?user=Utilisateur 200 10ms","timestamp":"2026-02-17T03:28:04.348Z"}
+{"level":"info","message":"GET /profile/edit 200 44ms","timestamp":"2026-02-17T03:29:36.888Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: POST /profile/update","method":"POST","path":"/profile/update","stack":"Error: Route non trouvée: POST /profile/update\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T03:29:53.505Z","user":"anonymous"}
+{"level":"info","message":"POST /profile/update 404 35ms","timestamp":"2026-02-17T03:29:53.527Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T03:51:14.803Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T03:51:26.661Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T03:51:28.597Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T03:51:28.886Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T03:51:28.896Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T03:51:28.898Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T03:51:28.901Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T03:51:28.903Z"}
+{"level":"info","message":"GET /profile?user=Utilisateur 200 124ms","timestamp":"2026-02-17T03:51:38.170Z"}
+{"level":"info","message":"GET /iot?user=Utilisateur 200 22ms","timestamp":"2026-02-17T03:51:49.032Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email= 200 23ms","timestamp":"2026-02-17T03:52:11.110Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email= 304 15ms","timestamp":"2026-02-17T03:52:34.125Z"}
+{"level":"info","message":"GET /profile?user=Utilisateur&email= 200 17ms","timestamp":"2026-02-17T03:52:43.343Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T03:58:49.557Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T03:58:55.258Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T03:58:57.133Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T03:58:57.612Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T03:58:57.618Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T03:58:57.619Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T03:58:57.620Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T03:58:57.621Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email= 200 31ms","timestamp":"2026-02-17T03:58:59.388Z"}
+{"level":"info","message":"GET /iot?user=Utilisateur 304 24ms","timestamp":"2026-02-17T03:59:12.794Z"}
+{"level":"info","message":"GET /alerts?user=Utilisateur&email= 200 120ms","timestamp":"2026-02-17T03:59:15.807Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email= 200 12ms","timestamp":"2026-02-17T03:59:23.555Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email= 304 12ms","timestamp":"2026-02-17T03:59:27.662Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T04:00:21.975Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T04:00:35.401Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T04:00:36.729Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T04:00:36.846Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T04:00:36.860Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T04:00:36.861Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T04:00:36.865Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T04:00:37.578Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email= 200 29ms","timestamp":"2026-02-17T04:00:50.562Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email= 304 14ms","timestamp":"2026-02-17T04:01:35.125Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email= 200 51ms","timestamp":"2026-02-17T04:01:40.007Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email= 304 15ms","timestamp":"2026-02-17T04:01:42.056Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email= 304 14ms","timestamp":"2026-02-17T04:01:48.480Z"}
+{"level":"info","message":"GET /profile?user=Utilisateur&email= 304 5ms","timestamp":"2026-02-17T04:02:04.654Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email=email%40exemple.com 200 5ms","timestamp":"2026-02-17T04:02:09.532Z"}
+{"level":"info","message":"GET /rapports?user=Utilisateur&email=email%40exemple.com 200 32ms","timestamp":"2026-02-17T04:03:23.968Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T04:14:41.835Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T04:14:48.815Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T04:14:50.854Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T04:14:50.946Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T04:14:50.951Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T04:14:50.952Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T04:14:50.953Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T04:14:50.954Z"}
+{"level":"info","message":"GET /home?user=Utilisateur&email=email%40exemple.com 200 168ms","timestamp":"2026-02-17T04:18:24.062Z"}
+{"level":"info","message":"GET /logout 302 8ms","timestamp":"2026-02-17T04:18:32.528Z"}
+{"level":"info","message":"GET /dashboard 304 15ms","timestamp":"2026-02-17T04:18:32.551Z"}
+{"level":"info","message":"GET /login 200 32ms","timestamp":"2026-02-17T04:18:34.792Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T04:18:49.223Z"}
+{"level":"info","message":"POST /login 302 2471ms","timestamp":"2026-02-17T04:18:49.250Z"}
+{"level":"info","message":"GET /home?user=Jean&email=jeanDupont%40gmail.com&prenom=Jean&nom=Dupont%20 200 138ms","timestamp":"2026-02-17T04:18:49.464Z"}
+{"level":"info","message":"GET /profile?user=Jean&email=jeanDupont%40gmail.com&prenom=Jean&nom=Dupont%20 200 35ms","timestamp":"2026-02-17T04:18:55.214Z"}
+{"level":"info","message":"GET /home?user=Jean&email=jeanDupont%40gmail.com 200 19ms","timestamp":"2026-02-17T04:19:00.621Z"}
+{"level":"info","message":"GET /lots?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 200 22ms","timestamp":"2026-02-17T04:19:03.000Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /css/style.css","method":"GET","path":"/css/style.css","stack":"Error: Route non trouvée: GET /css/style.css\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:61:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T04:19:03.255Z","user":"anonymous"}
+{"level":"info","message":"GET /css/style.css 404 55ms","timestamp":"2026-02-17T04:19:03.289Z"}
+{"level":"info","message":"GET /iot?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 200 14ms","timestamp":"2026-02-17T04:19:16.329Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 200 7ms","timestamp":"2026-02-17T04:19:21.260Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 304 11ms","timestamp":"2026-02-17T04:19:55.400Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 304 11ms","timestamp":"2026-02-17T04:20:01.552Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 304 103ms","timestamp":"2026-02-17T04:22:43.158Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=&nom= 304 49ms","timestamp":"2026-02-17T04:23:21.832Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T04:30:58.430Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T04:31:06.890Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T04:31:09.705Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T04:31:09.752Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T04:31:09.762Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T04:31:09.768Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T04:31:09.769Z"}
+{"level":"info","message":"✅ Connexion SMTP établie avec succès","timestamp":"2026-02-17T04:31:09.800Z"}
+{"level":"info","message":"GET /profile?user=Jean&email=jeanDupont%40gmail.com 200 123ms","timestamp":"2026-02-17T04:31:26.324Z"}
+{"level":"info","message":"GET /logout 302 38ms","timestamp":"2026-02-17T04:31:28.738Z"}
+{"level":"info","message":"GET /dashboard 304 37ms","timestamp":"2026-02-17T04:31:28.847Z"}
+{"level":"info","message":"GET /login 200 56ms","timestamp":"2026-02-17T04:31:44.265Z"}
+{"level":"info","message":"Utilisateur connecté: jeanDupont@gmail.com","timestamp":"2026-02-17T04:31:57.981Z"}
+{"level":"info","message":"POST /login 302 1808ms","timestamp":"2026-02-17T04:31:57.987Z"}
+{"level":"info","message":"GET /home?user=Jean&email=jeanDupont%40gmail.com&prenom=Jean&nom=Dupont%20 200 19ms","timestamp":"2026-02-17T04:31:58.041Z"}
+{"level":"info","message":"GET /rapports?user=Jean&email=jeanDupont%40gmail.com&prenom=Jean&nom=Dupont%20 200 63ms","timestamp":"2026-02-17T04:32:04.587Z"}
+{"level":"info","message":"GET /iot?user=Jean&email=jeanDupont%40gmail.com 200 111ms","timestamp":"2026-02-17T04:32:32.080Z"}
+{"level":"info","message":"GET /profile?user=Jean&email=jeanDupont%40gmail.com 304 53ms","timestamp":"2026-02-17T04:32:38.561Z"}
+{"level":"info","message":"GET /alerts?user=Jean&email=jeanDupont%40gmail.com 200 164ms","timestamp":"2026-02-17T04:32:41.786Z"}
+{"level":"info","message":"GET /dashboard 304 42ms","timestamp":"2026-02-17T04:32:48.719Z"}
+{"level":"info","message":"GET /register 200 63ms","timestamp":"2026-02-17T04:32:57.889Z"}
+{"level":"info","message":"Nouvel utilisateur inscrit: ghost@gmail.com","timestamp":"2026-02-17T04:33:57.608Z"}
+{"level":"info","message":"POST /register 302 2301ms","timestamp":"2026-02-17T04:33:57.612Z"}
+{"level":"info","message":"GET /home?user=Ghost 200 20ms","timestamp":"2026-02-17T04:33:57.713Z"}
+{"level":"info","message":"GET /home?user=Ghost 304 59ms","timestamp":"2026-02-17T04:36:25.073Z"}
+{"level":"info","message":"GET /logout 302 22ms","timestamp":"2026-02-17T04:36:30.530Z"}
+{"level":"info","message":"GET /dashboard 304 48ms","timestamp":"2026-02-17T04:36:30.609Z"}
+{"level":"info","message":"GET /login 200 214ms","timestamp":"2026-02-17T04:36:36.508Z"}
+{"level":"info","message":"GET /favicon.ico 204 43ms","timestamp":"2026-02-17T04:36:39.854Z"}
+{"level":"info","message":"Utilisateur connecté: ghost@gmail.com","timestamp":"2026-02-17T04:37:04.888Z"}
+{"level":"info","message":"POST /login 302 2680ms","timestamp":"2026-02-17T04:37:04.896Z"}
+{"level":"info","message":"GET /home?user=Ghost&email=ghost%40gmail.com&prenom=Ghost&nom=Dylan 200 38ms","timestamp":"2026-02-17T04:37:04.942Z"}
+{"level":"info","message":"GET /home?user=Ghost&email=ghost%40gmail.com&prenom=Ghost&nom=Dylan 304 63ms","timestamp":"2026-02-17T04:37:36.490Z"}
+{"level":"info","message":"GET /logout 302 9ms","timestamp":"2026-02-17T04:37:39.856Z"}
+{"level":"info","message":"GET /dashboard 304 17ms","timestamp":"2026-02-17T04:37:39.909Z"}
+{"level":"info","message":"GET /login 304 144ms","timestamp":"2026-02-17T04:37:44.743Z"}
+{"level":"info","message":"GET /favicon.ico 204 22ms","timestamp":"2026-02-17T04:37:47.429Z"}
+{"level":"info","message":"Utilisateur connecté: ghost@gmail.com","timestamp":"2026-02-17T04:38:02.774Z"}
+{"level":"info","message":"POST /login 302 2045ms","timestamp":"2026-02-17T04:38:02.790Z"}
+{"level":"info","message":"GET /home?user=Dylan&email=ghost%40gmail.com&prenom=Dylan&nom=Ghost 200 11ms","timestamp":"2026-02-17T04:38:02.867Z"}
+{"level":"info","message":"GET /profile?user=Dylan&email=ghost%40gmail.com&prenom=Dylan&nom=Ghost 200 63ms","timestamp":"2026-02-17T04:38:09.454Z"}
+{"level":"info","message":"GET /rapports?user=Dylan&email=ghost%40gmail.com&prenom=Dylan&nom=Ghost 200 60ms","timestamp":"2026-02-17T04:38:16.566Z"}
+{"level":"info","message":"GET /alerts?user=Dylan&email=ghost%40gmail.com&prenom=Dylan&nom=Ghost 200 95ms","timestamp":"2026-02-17T04:38:26.763Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /alerts/1/resolve?user=Dylan","method":"GET","path":"/alerts/1/resolve","stack":"Error: Route non trouvée: GET /alerts/1/resolve?user=Dylan\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:76:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T04:38:33.039Z","user":"anonymous"}
+{"level":"info","message":"GET /alerts/1/resolve?user=Dylan 404 94ms","timestamp":"2026-02-17T04:38:33.088Z"}
+{"level":"info","message":"GET /alerts/new 200 82ms","timestamp":"2026-02-17T04:38:46.722Z"}
+{"ip":"127.0.0.1","level":"error","message":"Erreur non gérée: Route non trouvée: GET /alerts/new/resolve","method":"GET","path":"/alerts/new/resolve","stack":"Error: Route non trouvée: GET /alerts/new/resolve\n    at notFoundHandler (/home/dylan/farm-backend/src/middlewares/errorHandler.js:48:17)\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9\n    at processParams (/home/dylan/farm-backend/node_modules/router/index.js:582:12)\n    at next (/home/dylan/farm-backend/node_modules/router/index.js:291:5)\n    at /home/dylan/farm-backend/src/app.js:76:3\n    at Layer.handleRequest (/home/dylan/farm-backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/dylan/farm-backend/node_modules/router/index.js:342:13)\n    at /home/dylan/farm-backend/node_modules/router/index.js:297:9","timestamp":"2026-02-17T04:39:07.099Z","user":"anonymous"}
+{"level":"info","message":"GET /alerts/new/resolve 404 71ms","timestamp":"2026-02-17T04:39:07.152Z"}
+{"level":"info","message":"GET /alerts?user=Utilisateur 200 55ms","timestamp":"2026-02-17T04:39:12.957Z"}
+{"level":"info","message":"GET /alerts/new 304 54ms","timestamp":"2026-02-17T04:39:17.787Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T04:57:58.320Z"}
+{"level":"info","message":"Initialisation de la base de données...","timestamp":"2026-02-17T04:58:04.257Z"}
+{"level":"info","message":"✅ Base de données initialisée","timestamp":"2026-02-17T04:58:14.964Z"}
+{"level":"info","message":"✅ Serveur démarré sur le port 3000","timestamp":"2026-02-17T04:58:15.002Z"}
+{"level":"info","message":"🌐 API disponible sur: http://localhost:3000/api","timestamp":"2026-02-17T04:58:15.003Z"}
+{"level":"info","message":"📊 Dashboard disponible sur: http://localhost:3000","timestamp":"2026-02-17T04:58:15.004Z"}
+{"level":"info","message":"🏥 Health check: http://localhost:3000/api/health","timestamp":"2026-02-17T04:58:15.004Z"}
+{"level":"info","message":"🛑 Signal SIGINT reçu, arrêt du serveur...","timestamp":"2026-02-17T04:58:26.749Z"}
