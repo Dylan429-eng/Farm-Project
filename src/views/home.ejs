@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Accueil - Ferme ManiChicks</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,41 +13,45 @@
       min-height: 100vh;
     }
     
-    /* Header */
     .header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 20px 30px;
+      padding: 16px 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      gap: 15px;
+    }
+    
+    @media (min-width: 768px) {
+      .header { padding: 20px 30px; }
     }
     
     .header-brand {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
     }
     
-    .header-logo {
-      font-size: 2em;
-    }
+    .header-logo { font-size: 1.8em; }
+    .header-title { font-size: 1.2em; font-weight: 700; }
     
-    .header-title {
-      font-size: 1.5em;
-      font-weight: 700;
+    @media (min-width: 768px) {
+      .header-logo { font-size: 2em; }
+      .header-title { font-size: 1.5em; }
     }
     
     .header-user {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     
     .user-avatar {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: white;
       color: #667eea;
@@ -55,96 +59,114 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
+      font-size: 1em;
+    }
+    
+    @media (min-width: 768px) {
+      .user-avatar { width: 40px; height: 40px; font-size: 1.1em; }
     }
     
     .logout-btn {
       background: rgba(255,255,255,0.2);
       color: white;
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 0.9em;
+      font-size: 0.85em;
       transition: background 0.3s;
     }
     
-    .logout-btn:hover {
-      background: rgba(255,255,255,0.3);
-    }
-    
-    /* Main Content */
     .main {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 30px;
+      padding: 20px 16px 80px;
     }
     
-    /* Welcome Section */
+    @media (min-width: 768px) {
+      .main { padding: 30px 30px 80px; }
+    }
+    
     .welcome {
       background: white;
       border-radius: 15px;
-      padding: 30px;
-      margin-bottom: 30px;
+      padding: 20px;
+      margin-bottom: 25px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     
     .welcome h1 {
+      font-size: 1.4em;
+      margin-bottom: 8px;
       color: #333;
-      margin-bottom: 10px;
+      word-break: break-word;
     }
     
     .welcome p {
       color: #6b7280;
+      font-size: 0.9em;
     }
     
-    /* Stats Grid */
+    @media (min-width: 768px) {
+      .welcome { padding: 30px; margin-bottom: 30px; }
+      .welcome h1 { font-size: 2em; }
+      .welcome p { font-size: 1em; }
+    }
+    
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
       margin-bottom: 30px;
+    }
+    
+    @media (min-width: 480px) {
+      .stats-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
     }
     
     .stat-card {
       background: white;
       border-radius: 12px;
-      padding: 20px;
+      padding: 18px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       transition: transform 0.3s;
+      text-align: center;
     }
     
-    .stat-card:hover {
-      transform: translateY(-5px);
+    .stat-card:hover { transform: translateY(-5px); }
+    .stat-card h3 { color: #6b7280; font-size: 0.85em; margin-bottom: 8px; }
+    .stat-card .value { font-size: 1.8em; font-weight: bold; color: #667eea; }
+    
+    @media (min-width: 768px) {
+      .stat-card { padding: 25px; }
+      .stat-card h3 { font-size: 1em; margin-bottom: 10px; }
+      .stat-card .value { font-size: 2.5em; }
     }
     
-    .stat-card h3 {
-      color: #6b7280;
-      font-size: 0.9em;
-      margin-bottom: 10px;
-    }
-    
-    .stat-card .value {
-      font-size: 2em;
-      font-weight: bold;
-      color: #667eea;
-    }
-    
-    /* Quick Actions */
     .quick-actions {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 16px;
       margin-bottom: 30px;
+    }
+    
+    @media (min-width: 480px) {
+      .quick-actions { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    }
+    
+    @media (min-width: 768px) {
+      .quick-actions { grid-template-columns: repeat(4, 1fr); }
     }
     
     .action-card {
       background: white;
       border-radius: 12px;
-      padding: 25px;
+      padding: 20px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       text-decoration: none;
       color: inherit;
       transition: all 0.3s;
       border: 2px solid transparent;
+      text-align: center;
     }
     
     .action-card:hover {
@@ -152,24 +174,16 @@
       transform: translateY(-3px);
     }
     
-    .action-icon {
-      font-size: 2.5em;
-      margin-bottom: 15px;
+    .action-icon { font-size: 2em; margin-bottom: 12px; }
+    .action-title { font-size: 1em; font-weight: 600; margin-bottom: 6px; color: #333; }
+    .action-desc { color: #6b7280; font-size: 0.8em; }
+    
+    @media (min-width: 768px) {
+      .action-icon { font-size: 2.5em; margin-bottom: 15px; }
+      .action-title { font-size: 1.2em; margin-bottom: 8px; }
+      .action-desc { font-size: 0.9em; }
     }
     
-    .action-title {
-      font-size: 1.2em;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #333;
-    }
-    
-    .action-desc {
-      color: #6b7280;
-      font-size: 0.9em;
-    }
-    
-    /* Bottom Navigation Tabs */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -179,8 +193,10 @@
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
       display: flex;
       justify-content: space-around;
-      padding: 10px 0;
+      padding: 8px 0;
       z-index: 100;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     
     .nav-tab {
@@ -189,134 +205,65 @@
       align-items: center;
       text-decoration: none;
       color: #9ca3af;
-      padding: 8px 20px;
+      padding: 6px 12px;
       border-radius: 10px;
-      transition: all 0.3s;
-      font-size: 0.8em;
+      font-size: 0.7em;
+      min-width: 60px;
+    }
+    
+    .nav-tab-icon { font-size: 1.3em; margin-bottom: 3px; }
+    
+    @media (min-width: 480px) {
+      .nav-tab { padding: 8px 16px; font-size: 0.8em; min-width: 70px; }
+      .nav-tab-icon { font-size: 1.5em; margin-bottom: 4px; }
     }
     
     .nav-tab:hover, .nav-tab.active {
       color: #667eea;
       background: #f3f4f6;
     }
-    
-    .nav-tab-icon {
-      font-size: 1.5em;
-      margin-bottom: 4px;
-    }
-    
-    /* Content sections */
-    .content-section {
-      display: none;
-    }
-    
-    .content-section.active {
-      display: block;
-    }
-    
-    /* Add padding to main for bottom nav */
-    .main-with-nav {
-      padding-bottom: 80px;
-    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="header-brand">
       <span class="header-logo">🐔</span>
       <span class="header-title">Ferme ManiChicks</span>
     </div>
     <div class="header-user">
-      <div class="user-avatar">
-        <%= user ? user.charAt(0).toUpperCase() : 'U' %>
-      </div>
+      <div class="user-avatar"><%= user ? user.charAt(0).toUpperCase() : 'U' %></div>
       <a href="/logout" class="logout-btn">Déconnexion</a>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="main main-with-nav">
-    <!-- Welcome -->
+  <main class="main">
     <div class="welcome">
       <h1>Bienvenue<%= prenom || nom ? ' ' + (prenom || nom) : (user ? ' ' + user : '') %>! 👋</h1>
       <p>Voici un aperçu de votre exploitation avicole</p>
     </div>
 
-    <!-- Stats -->
     <div class="stats-grid">
-      <div class="stat-card">
-        <h3>🐣 Lots Actifs</h3>
-        <div class="value"><%= stats.lots || 0 %></div>
-      </div>
-      <div class="stat-card">
-        <h3>🐥 Poussins</h3>
-        <div class="value"><%= stats.poussins || 0 %></div>
-      </div>
-      <div class="stat-card">
-        <h3>🚨 Alertes</h3>
-        <div class="value"><%= stats.alertes || 0 %></div>
-      </div>
-      <div class="stat-card">
-        <h3>📡 Capteurs</h3>
-        <div class="value"><%= stats.capteurs || 0 %></div>
-      </div>
+      <div class="stat-card"><h3>🐣 Lots Actifs</h3><div class="value"><%= stats.lots || 0 %></div></div>
+      <div class="stat-card"><h3>🐥 Poussins</h3><div class="value"><%= stats.poussins || 0 %></div></div>
+      <div class="stat-card"><h3>🚨 Alertes</h3><div class="value"><%= stats.alertes || 0 %></div></div>
+      <div class="stat-card"><h3>📡 Capteurs</h3><div class="value"><%= stats.capteurs || 0 %></div></div>
     </div>
 
-    <!-- Quick Actions -->
     <div class="quick-actions">
-      <a href="/lots" class="action-card">
-        <div class="action-icon">🐣</div>
-        <div class="action-title">Gestion des Lots</div>
-        <div class="action-desc">Gérez vos lots de poussins</div>
-      </a>
-      
-      <a href="/alerts" class="action-card">
-        <div class="action-icon">🚨</div>
-        <div class="action-title">Alertes</div>
-        <div class="action-desc">Voir et gérer les alertes</div>
-      </a>
-      
-      <a href="/lots/new" class="action-card">
-        <div class="action-icon">➕</div>
-        <div class="action-title">Nouveau Lot</div>
-        <div class="action-desc">Créer un nouveau lot</div>
-      </a>
-      
-      <a href="/rapports" class="action-card">
-        <div class="action-icon">📊</div>
-        <div class="action-title">Rapports</div>
-        <div class="action-desc">Voir les statistiques</div>
-      </a>
+      <a href="/lots" class="action-card"><div class="action-icon">🐣</div><div class="action-title">Gestion des Lots</div><div class="action-desc">Gérez vos lots de poussins</div></a>
+      <a href="/alerts" class="action-card"><div class="action-icon">🚨</div><div class="action-title">Alertes</div><div class="action-desc">Voir et gérer les alertes</div></a>
+      <a href="/lots/new" class="action-card"><div class="action-icon">➕</div><div class="action-title">Nouveau Lot</div><div class="action-desc">Créer un nouveau lot</div></a>
+      <a href="/rapports" class="action-card"><div class="action-icon">📊</div><div class="action-title">Rapports</div><div class="action-desc">Voir les statistiques</div></a>
     </div>
   </main>
 
-  <!-- Bottom Navigation Tabs -->
   <nav class="bottom-nav">
-    <a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab active">
-      <span class="nav-tab-icon">🏠</span>
-      <span>Accueil</span>
-    </a>
-    <a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab">
-      <span class="nav-tab-icon">🐣</span>
-      <span>Lots</span>
-    </a>
-    <a href="/alerts?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab">
-      <span class="nav-tab-icon">🚨</span>
-      <span>Alertes</span>
-    </a>
-    <a href="/iot?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab">
-      <span class="nav-tab-icon">📡</span>
-      <span>IoT</span>
-    </a>
-    <a href="/rapports?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab">
-      <span class="nav-tab-icon">📊</span>
-      <span>Rapports</span>
-    </a>
-    <a href="/profile?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>&prenom=<%= encodeURIComponent(prenom || '') %>&nom=<%= encodeURIComponent(nom || '') %>" class="nav-tab">
-      <span class="nav-tab-icon">👤</span>
-      <span>Profil</span>
-    </a>
+    <a href="/home" class="nav-tab active"><span class="nav-tab-icon">🏠</span><span>Accueil</span></a>
+    <a href="/lots" class="nav-tab"><span class="nav-tab-icon">🐣</span><span>Lots</span></a>
+    <a href="/alerts" class="nav-tab"><span class="nav-tab-icon">🚨</span><span>Alertes</span></a>
+    <a href="/iot" class="nav-tab"><span class="nav-tab-icon">📡</span><span>IoT</span></a>
+    <a href="/rapports" class="nav-tab"><span class="nav-tab-icon">📊</span><span>Rapports</span></a>
+    <a href="/profile" class="nav-tab"><span class="nav-tab-icon">👤</span><span>Profil</span></a>
   </nav>
 </body>
 </html>

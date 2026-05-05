@@ -7,44 +7,69 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f3f4f6;
       min-height: 100vh;
     }
     .header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 20px 30px;
+      padding: 16px 20px;
     }
-    .header-brand { display: flex; align-items: center; gap: 15px; }
-    .header-logo { font-size: 2em; }
-    .header-title { font-size: 1.5em; font-weight: 700; }
-    .main { max-width: 600px; margin: 0 auto; padding: 30px; padding-bottom: 80px; }
-    .breadcrumb { color: #6b7280; margin-bottom: 20px; }
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-logo { font-size: 1.8em; }
+    .header-title { font-size: 1.3em; font-weight: 700; }
+
+    .main { max-width: 600px; margin: 0 auto; padding: 20px; padding-bottom: 90px; }
+    .breadcrumb { color: #6b7280; margin-bottom: 16px; font-size: 0.85em; }
     .breadcrumb a { color: #667eea; text-decoration: none; }
-    .card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .card-title { font-size: 1.3em; color: #333; margin-bottom: 20px; }
-    .form-group { margin-bottom: 20px; }
-    .form-label { display: block; color: #374151; margin-bottom: 8px; font-weight: 500; }
+
+    .card { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .card-title { font-size: 1.1em; font-weight: 700; color: #333; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-label { display: block; color: #374151; margin-bottom: 7px; font-weight: 600; font-size: 0.9em; }
     .form-input {
-      width: 100%;
-      padding: 12px 16px;
-      border: 2px solid #e5e7eb;
-      border-radius: 8px;
-      font-size: 1em;
-      transition: border-color 0.3s;
+      width: 100%; padding: 11px 14px;
+      border: 2px solid #e5e7eb; border-radius: 8px;
+      font-size: 0.95em; transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .form-input:focus { outline: none; border-color: #667eea; }
-    .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; font-size: 1em; }
+    .form-input:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); }
+
+    .actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 11px 22px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; font-size: 0.92em; border: none; cursor: pointer;
+      transition: all 0.2s; flex: 1 1 auto;
+    }
     .btn-primary { background: #667eea; color: white; }
     .btn-primary:hover { background: #5568d3; }
     .btn-secondary { background: #6b7280; color: white; }
     .btn-secondary:hover { background: #4b5563; }
-    .actions { display: flex; gap: 15px; margin-top: 20px; }
-    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-around; padding: 10px 0; }
-    .nav-tab { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #9ca3af; padding: 8px 20px; border-radius: 10px; font-size: 0.8em; }
+
+    /* Bottom nav */
+    .bottom-nav {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      display: flex; justify-content: space-around; padding: 8px 0; z-index: 100;
+    }
+    .nav-tab {
+      display: flex; flex-direction: column; align-items: center;
+      text-decoration: none; color: #9ca3af;
+      padding: 6px 10px; border-radius: 10px; font-size: 0.7em;
+    }
     .nav-tab:hover, .nav-tab.active { color: #667eea; background: #f3f4f6; }
-    .nav-tab-icon { font-size: 1.5em; margin-bottom: 4px; }
+    .nav-tab-icon { font-size: 1.4em; margin-bottom: 2px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .header-title { font-size: 1.1em; }
+      .main { padding: 12px; padding-bottom: 90px; }
+      .card { padding: 16px; }
+      .form-input { font-size: 16px; /* prevent iOS zoom */ }
+      .actions { gap: 8px; }
+    }
   </style>
 </head>
 <body>
@@ -54,10 +79,12 @@
       <span class="header-title">Modifier le profil</span>
     </div>
   </header>
+
   <main class="main">
     <div class="breadcrumb">
       <a href="/dashboard">Dashboard</a> / <a href="/profile">Profil</a> / Modifier
     </div>
+
     <div class="card">
       <h2 class="card-title">Informations du profil</h2>
       <form action="/profile/update" method="POST">
@@ -79,11 +106,12 @@
         </div>
         <div class="actions">
           <button type="submit" class="btn btn-primary">✓ Enregistrer</button>
-          <a href="/profile" class="btn btn-secondary">← Retour</a>
+          <a href="/profile?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="btn btn-secondary">← Retour</a>
         </div>
       </form>
     </div>
   </main>
+
   <nav class="bottom-nav">
     <a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🏠</span><span>Accueil</span></a>
     <a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🐣</span><span>Lots</span></a>

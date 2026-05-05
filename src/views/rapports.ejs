@@ -7,7 +7,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f3f4f6;
       min-height: 100vh;
       padding-bottom: 80px;
@@ -15,27 +15,86 @@
     .header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 20px 30px;
+      padding: 16px 20px;
     }
-    .header-brand { display: flex; align-items: center; gap: 15px; }
-    .header-logo { font-size: 2em; }
-    .header-title { font-size: 1.5em; font-weight: 700; }
-    .main { max-width: 1400px; margin: 0 auto; padding: 30px; }
-    .welcome { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .welcome h1 { color: #333; margin-bottom: 10px; }
-    .welcome p { color: #6b7280; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
-    .stat-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
-    .stat-card h3 { color: #6b7280; font-size: 0.9em; margin-bottom: 10px; }
-    .stat-card .value { font-size: 2em; font-weight: bold; color: #667eea; }
-    .chart-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 30px; }
-    .charts-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px; }
-    .chart-card h2 { color: #333; margin-bottom: 20px; font-size: 1.2em; }
-    .chart-container { position: relative; height: 300px; }
-    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-around; padding: 10px 0; z-index: 1000; }
-    .nav-tab { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #9ca3af; padding: 8px 15px; border-radius: 10px; font-size: 0.75em; }
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-logo { font-size: 1.8em; }
+    .header-title { font-size: 1.3em; font-weight: 700; }
+
+    .main { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+    .welcome {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .welcome h1 { color: #333; margin-bottom: 6px; font-size: 1.2em; }
+    .welcome p { color: #6b7280; font-size: 0.9em; }
+
+    /* KPI grid : 4 colonnes desktop, 2 mobile */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .stat-card h3 { color: #6b7280; font-size: 0.82em; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .stat-card .value { font-size: 1.8em; font-weight: 700; color: #667eea; }
+
+    /* Charts : 2 colonnes desktop, 1 colonne mobile */
+    .charts-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .chart-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .chart-card h2 { color: #333; margin-bottom: 16px; font-size: 1em; }
+    .chart-container { position: relative; height: 260px; }
+
+    /* Bottom nav */
+    .bottom-nav {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: white;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      display: flex; justify-content: space-around;
+      padding: 8px 0; z-index: 1000;
+    }
+    .nav-tab {
+      display: flex; flex-direction: column; align-items: center;
+      text-decoration: none; color: #9ca3af;
+      padding: 6px 10px; border-radius: 10px; font-size: 0.7em;
+    }
     .nav-tab:hover, .nav-tab.active { color: #667eea; background: #f3f4f6; }
-    .nav-tab-icon { font-size: 1.5em; margin-bottom: 4px; }
+    .nav-tab-icon { font-size: 1.4em; margin-bottom: 2px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .header-title { font-size: 1.1em; }
+      .main { padding: 12px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat-card { padding: 14px; }
+      .stat-card .value { font-size: 1.4em; }
+      .charts-row { grid-template-columns: 1fr; gap: 12px; }
+      .chart-container { height: 220px; }
+    }
   </style>
 </head>
 <body>
@@ -45,33 +104,33 @@
       <span class="header-title">Rapports</span>
     </div>
   </header>
-  
+
   <main class="main">
     <div class="welcome">
       <h1>📊 Rapports et Statistiques</h1>
       <p>Analysez les performances de votre exploitation</p>
     </div>
-    
+
     <!-- KPI Cards -->
     <div class="stats-grid">
       <div class="stat-card">
         <h3>Total Poussins</h3>
-        <div class="value">2,450</div>
+        <div class="value">2 450</div>
       </div>
       <div class="stat-card">
         <h3>CPS Moyen</h3>
-        <div class="value">2.73€</div>
+        <div class="value" style="font-size:1.3em">25 000 XAF</div>
       </div>
       <div class="stat-card">
         <h3>PDS Moyen</h3>
-        <div class="value">3.45€</div>
+        <div class="value" style="font-size:1.3em">34 500 XAF</div>
       </div>
       <div class="stat-card">
         <h3>Taux de Mortalité</h3>
         <div class="value">2.2%</div>
       </div>
     </div>
-    
+
     <!-- Charts Row 1 -->
     <div class="charts-row">
       <div class="chart-card">
@@ -87,7 +146,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Charts Row 2 -->
     <div class="charts-row">
       <div class="chart-card">
@@ -104,7 +163,7 @@
       </div>
     </div>
   </main>
-  
+
   <nav class="bottom-nav">
     <a href="/home?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🏠</span><span>Accueil</span></a>
     <a href="/lots?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">🐣</span><span>Lots</span></a>
@@ -114,112 +173,84 @@
     <a href="/profile?user=<%= encodeURIComponent(user || '') %>&email=<%= encodeURIComponent(email || '') %>" class="nav-tab"><span class="nav-tab-icon">👤</span><span>Profil</span></a>
   </nav>
 
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    // Couleurs
     const colors = {
-      primary: '#667eea',
-      secondary: '#764ba2', 
-      success: '#10b981',
-      warning: '#f59e0b',
-      danger: '#ef4444',
-      info: '#3b82f6'
+      primary: '#667eea', secondary: '#764ba2',
+      success: '#10b981', warning: '#f59e0b',
+      danger: '#ef4444', info: '#3b82f6'
     };
 
-    // Graphique 1: Production
-    const ctx1 = document.getElementById('productionChart');
-    if (ctx1) {
-      new Chart(ctx1, {
-        type: 'line',
-        data: {
-          labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'],
-          datasets: [{
-            label: 'Poids (kg)',
-            data: [0.5, 1.2, 1.8, 2.4, 2.8, 3.2],
-            borderColor: colors.primary,
-            backgroundColor: 'rgba(102, 126, 234, 0.2)',
-            fill: true,
-            tension: 0.4,
-            pointRadius: 5,
-            pointHoverRadius: 7
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: true, position: 'top' } },
-          scales: { y: { beginAtZero: true, max: 4, title: { display: true, text: 'Poids (kg)' } } }
-        }
-      });
-    }
+    new Chart(document.getElementById('productionChart'), {
+      type: 'line',
+      data: {
+        labels: ['Sem 1','Sem 2','Sem 3','Sem 4','Sem 5','Sem 6'],
+        datasets: [{
+          label: 'Poids (kg)',
+          data: [0.5, 1.2, 1.8, 2.4, 2.8, 3.2],
+          borderColor: colors.primary,
+          backgroundColor: 'rgba(102,126,234,0.15)',
+          fill: true, tension: 0.4, pointRadius: 4
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: true, position: 'top' } },
+        scales: { y: { beginAtZero: true, max: 4, title: { display: true, text: 'Poids (kg)' } } }
+      }
+    });
 
-    // Graphique 2: Mortalité
-    const ctx2 = document.getElementById('mortalityChart');
-    if (ctx2) {
-      new Chart(ctx2, {
-        type: 'bar',
-        data: {
-          labels: ['Lot A1', 'Lot B2', 'Lot C3'],
-          datasets: [{
-            label: 'Mortalité (%)',
-            data: [1.5, 1.0, 4.2],
-            backgroundColor: [colors.success, colors.success, colors.danger],
-            borderRadius: 8
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: { y: { beginAtZero: true, title: { display: true, text: '%' } } }
-        }
-      });
-    }
+    new Chart(document.getElementById('mortalityChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Lot A1','Lot B2','Lot C3'],
+        datasets: [{
+          label: 'Mortalité (%)',
+          data: [1.5, 1.0, 4.2],
+          backgroundColor: [colors.success, colors.success, colors.danger],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: '%' } } }
+      }
+    });
 
-    // Graphique 3: Coûts
-    const ctx3 = document.getElementById('costsChart');
-    if (ctx3) {
-      new Chart(ctx3, {
-        type: 'doughnut',
-        data: {
-          labels: ['Alimentation', 'Santé', 'Main œuvre', 'Énergie', 'Autre'],
-          datasets: [{
-            data: [45, 25, 15, 10, 5],
-            backgroundColor: [colors.primary, colors.success, colors.warning, colors.info, colors.secondary],
-            borderWidth: 0
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: true, position: 'right' } }
-        }
-      });
-    }
+    new Chart(document.getElementById('costsChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Alimentation','Santé','Main œuvre','Énergie','Autre'],
+        datasets: [{
+          data: [45, 25, 15, 10, 5],
+          backgroundColor: [colors.primary, colors.success, colors.warning, colors.info, colors.secondary],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: true, position: 'right' } }
+      }
+    });
 
-    // Graphique 4: Performance Lots
-    const ctx4 = document.getElementById('lotsChart');
-    if (ctx4) {
-      new Chart(ctx4, {
-        type: 'bar',
-        data: {
-          labels: ['Lot A1', 'Lot B2', 'Lot C3'],
-          datasets: [{
-            label: 'CPS (€)',
-            data: [2.45, 2.80, 2.95],
-            backgroundColor: [colors.primary, colors.secondary, colors.info],
-            borderRadius: 8
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: { y: { beginAtZero: true, max: 4, title: { display: true, text: 'CPS (€)' } } }
-        }
-      });
-    }
+    new Chart(document.getElementById('lotsChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Lot A1','Lot B2','Lot C3'],
+        datasets: [{
+          label: 'CPS (€)',
+          data: [2.45, 2.80, 2.95],
+          backgroundColor: [colors.primary, colors.secondary, colors.info],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, max: 4, title: { display: true, text: 'CPS (€)' } } }
+      }
+    });
   </script>
 </body>
 </html>

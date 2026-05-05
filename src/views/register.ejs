@@ -7,7 +7,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       min-height: 100vh;
       display: flex;
@@ -19,69 +19,46 @@
       background: white;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      padding: 50px;
+      padding: 40px 36px;
       width: 100%;
       max-width: 500px;
     }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo h1 {
-      color: #667eea;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .logo p {
-      color: #6b7280;
-    }
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 30px;
-      font-size: 1.8em;
-    }
+    .logo { text-align: center; margin-bottom: 24px; }
+    .logo h1 { color: #667eea; font-size: 1.8em; margin-bottom: 8px; }
+    .logo p { color: #6b7280; font-size: 0.95em; }
+    h2 { text-align: center; color: #333; margin-bottom: 24px; font-size: 1.6em; }
+
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
+      gap: 14px;
     }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #374151;
-    }
+    .form-group { margin-bottom: 18px; }
+    .form-label { display: block; margin-bottom: 7px; font-weight: 600; color: #374151; font-size: 0.9em; }
     .form-control {
       width: 100%;
-      padding: 14px;
+      padding: 12px 14px;
       border: 2px solid #e5e7eb;
       border-radius: 10px;
-      font-size: 1em;
-      transition: all 0.3s;
+      font-size: 0.95em;
+      transition: border-color 0.3s, box-shadow 0.3s;
     }
     .form-control:focus {
       outline: none;
       border-color: #667eea;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
     }
-    .form-hint {
-      font-size: 0.85em;
-      color: #6b7280;
-      margin-top: 5px;
-    }
+    .form-hint { font-size: 0.82em; color: #6b7280; margin-top: 5px; }
+
     .btn {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       border-radius: 10px;
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 600;
-      transition: all 0.3s;
       border: none;
       cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .btn-primary {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -89,46 +66,29 @@
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 5px 15px rgba(102,126,234,0.35);
     }
-    .divider {
-      display: flex;
-      align-items: center;
-      margin: 30px 0;
-    }
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #e5e7eb;
-    }
-    .divider span {
-      padding: 0 15px;
-      color: #6b7280;
-      font-size: 0.9em;
-    }
-    .links {
-      text-align: center;
-      margin-top: 25px;
-    }
-    .links a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-    .alert {
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .alert-error {
-      background: #fee2e2;
-      color: #991b1b;
-      border-left: 4px solid #ef4444;
+    .btn-primary:active { transform: translateY(0); }
+
+    .divider { display: flex; align-items: center; margin: 24px 0; }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+    .divider span { padding: 0 14px; color: #6b7280; font-size: 0.88em; }
+
+    .links { text-align: center; margin-top: 10px; font-size: 0.9em; color: #6b7280; }
+    .links a { color: #667eea; text-decoration: none; font-weight: 600; }
+    .links a:hover { text-decoration: underline; }
+
+    .alert { padding: 14px; border-radius: 10px; margin-bottom: 18px; }
+    .alert-error { background: #fee2e2; color: #991b1b; border-left: 4px solid #ef4444; font-size: 0.9em; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      body { padding: 12px; align-items: flex-start; padding-top: 20px; }
+      .register-container { padding: 28px 20px; border-radius: 16px; }
+      .logo h1 { font-size: 1.5em; }
+      h2 { font-size: 1.3em; margin-bottom: 18px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .form-control { padding: 11px 12px; font-size: 16px; /* prevent iOS zoom */ }
     }
   </style>
 </head>
@@ -141,90 +101,47 @@
 
     <h2>Créer un compte</h2>
 
+    <% if (typeof error !== 'undefined' && error) { %>
+    <div class="alert alert-error"><%= error %></div>
+    <% } %>
+
     <form action="/register" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="prenom">Prénom</label>
-          <input 
-            type="text" 
-            id="prenom" 
-            name="prenom" 
-            class="form-control" 
-            placeholder="Jean" 
-            required
-          >
+          <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Jean" required>
         </div>
-
         <div class="form-group">
           <label class="form-label" for="nom">Nom</label>
-          <input 
-            type="text" 
-            id="nom" 
-            name="nom" 
-            class="form-control" 
-            placeholder="Dupont" 
-            required
-          >
+          <input type="text" id="nom" name="nom" class="form-control" placeholder="Dupont" required>
         </div>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="email">Adresse email</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          class="form-control" 
-          placeholder="jean.dupont@exemple.com" 
-          required
-        >
+        <input type="email" id="email" name="email" class="form-control" placeholder="jean.dupont@exemple.com" required>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="telephone">Téléphone</label>
-        <input 
-          type="tel" 
-          id="telephone" 
-          name="telephone" 
-          class="form-control" 
-          placeholder="+33 6 12 34 56 78" 
-        >
+        <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="+33 6 12 34 56 78">
       </div>
 
       <div class="form-group">
         <label class="form-label" for="password">Mot de passe</label>
-        <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          class="form-control" 
-          placeholder="••••••••" 
-          required
-          minlength="8"
-        >
+        <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required minlength="8">
         <p class="form-hint">Minimum 8 caractères</p>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="password_confirm">Confirmer le mot de passe</label>
-        <input 
-          type="password" 
-          id="password_confirm" 
-          name="password_confirm" 
-          class="form-control" 
-          placeholder="••••••••" 
-          required
-        >
+        <input type="password" id="password_confirm" name="password_confirm" class="form-control" placeholder="••••••••" required>
       </div>
 
-      <button type="submit" class="btn btn-primary">
-        Créer mon compte
-      </button>
+      <button type="submit" class="btn btn-primary">Créer mon compte</button>
     </form>
 
-    <div class="divider">
-      <span>ou</span>
-    </div>
+    <div class="divider"><span>ou</span></div>
 
     <div class="links">
       <p>Déjà un compte ? <a href="/login">Se connecter</a></p>
